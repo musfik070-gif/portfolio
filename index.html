@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Update these three lines when you change your name or role.
+       Search engines and link previews (WhatsApp, LinkedIn) read them. -->
+  <title>Md. Musfiqur Rahman | Junior Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Md. Musfiqur Rahman, a CSE graduate building web apps with React, Next.js, Node.js and MongoDB.">
+  <meta property="og:title" content="Md. Musfiqur Rahman | Junior Full-Stack Developer">
+  <meta property="og:description" content="Projects, skills and certificates of Md. Musfiqur Rahman.">
+  <meta property="og:type" content="website">
+
+  <meta name="theme-color" content="#fcfcfd">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Applies the saved theme before the page paints, so there is no flash. -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <a class="brand" id="brand" href="#top"></a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Sections"></nav>
+    <button class="theme-toggle" id="theme-toggle" type="button"></button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-label="Introduction"></section>
+    <div id="sections"></div>
+  </main>
+
+  <footer class="site-footer" id="footer"></footer>
+
+  <noscript>
+    <p class="noscript">This portfolio needs JavaScript to show its content.</p>
+  </noscript>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
