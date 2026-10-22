@@ -138,9 +138,9 @@ button, a { font: inherit; }
 .entry-head + .meta, .entry-text + .meta { margin-top: .4rem; }
 .entry-links { display: flex; margin-top: .6rem; font-size: .9rem; }
 
-.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 2rem 2.5rem; align-items: start; }
-.skill-group-title { font-size: .95rem; font-weight: 600; }
-.skill-group-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .65rem; }
+.skills { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; align-items: stretch; }
+.skill-group-title { display: flex; align-items: center; gap: .55rem; font-size: 1rem; font-weight: 600; }
+.skill-group-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
 .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); gap: 2.5rem; align-items: start; }
 .education-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 2.5rem; align-items: start; }
 .research-entry, .education-entry { margin: 0; padding-top: 1rem; border-top: 1px solid var(--line); }
@@ -167,8 +167,7 @@ button, a { font: inherit; }
 @media (min-width: 64rem) {
   .project-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
-@media (max-width: 47.99rem) {
-  :root { --gutter: 1rem; }
+@media (max-width: 63.99rem) {
   .site-header { flex-wrap: wrap; gap: 0; }
   .brand { margin-right: auto; }
   .menu-toggle { display: block; order: 2; margin-left: .5rem; }
@@ -177,6 +176,9 @@ button, a { font: inherit; }
   .nav.is-open { display: flex; }
   .nav a { min-height: 3rem; display: flex; align-items: center; padding-inline: .25rem; }
   .site-header.menu-open { height: auto; }
+}
+@media (max-width: 47.99rem) {
+  :root { --gutter: 1rem; }
   .hero-name { white-space: normal; }
   .hero-summary { max-width: 44rem; }
 }
@@ -193,4 +195,42 @@ button, a { font: inherit; }
 }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
+}
+
+/* ---------- New data-driven portfolio components ---------- */
+.skill-group { display: flex; flex-direction: column; min-width: 0; padding: 1.25rem; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.skill-group:hover { border-color: var(--accent); }
+.skill-group-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.skill-group-title::before { width: .5rem; height: .5rem; flex: 0 0 .5rem; border-radius: 50%; background: var(--accent); content: ''; }
+.skill-group .skill-tag { padding: .3rem .7rem; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--ink); font-size: .85rem; }
+.skill-group .skill-tag:hover { border-color: var(--accent); }
+.about-layout, .detail-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(15rem, 1fr); gap: 3rem; }
+.about-copy { display: grid; gap: 1rem; }
+.interest-list, .detail-list { display: grid; gap: .65rem; margin-top: .75rem; padding-left: 1.25rem; list-style: disc; }
+.social-links, .hero-social-links, .footer-social-links, .site-footer { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem; }
+.social-button { display: inline-flex; align-items: center; gap: .4rem; min-height: 2.5rem; padding: .5rem .8rem; border: 1px solid var(--line); border-radius: 8px; color: var(--ink); text-decoration: none; font-size: .875rem; }
+.social-button:hover { border-color: var(--accent); color: var(--ink); }
+.social-icon { width: 1rem; height: 1rem; fill: currentColor; }
+.site-footer { justify-content: space-between; padding-block: 2rem; }
+.footer-social-link, .back-to-top, .back-link { font-size: .875rem; }
+.detail-image { display: block; width: min(100%, 52rem); max-height: 30rem; margin: 1.5rem 0; object-fit: contain; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); }
+.detail-description { max-width: 48rem; margin-top: 1.25rem; }
+.detail-actions { max-width: 32rem; margin-top: 1.5rem; }
+.detail-grid { margin-top: 3rem; }
+.detail-grid .section-title { margin-bottom: .75rem; font-size: 1.35rem; }
+.project-not-found .button { margin-top: 1.25rem; }
+@media (max-width: 47.99rem) {
+  .about-layout, .detail-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .site-footer { align-items: flex-start; flex-direction: column; }
+  .detail-actions { grid-template-columns: 1fr; }
+}
+@media (min-width: 48rem) {
+  .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skill-group:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+@media (min-width: 64rem) {
+  .skills { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .skill-group:nth-child(1), .skill-group:nth-child(2) { grid-column: span 3; }
+  .skill-group:nth-child(n + 3) { grid-column: span 2; }
+  .skill-group:last-child:nth-child(odd) { grid-column: span 2; }
 }
