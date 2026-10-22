@@ -21,8 +21,8 @@ window.PORTFOLIO = {
     location: "Rajshahi, Bangladesh",
     // Each string below becomes one paragraph in the intro.
     summary: [
-      "I'm a Computer Science and Engineering graduate (CGPA 3.86/4.00) who builds full-stack web apps with React, Next.js, Node.js and MongoDB. My projects include role-based dashboards, Stripe payments and authentication flows.",
-      "For my BSc thesis I worked with a team of three on a machine learning pipeline in Python, with feature selection and cross-validation set up to avoid data leakage."
+      "I'm a Computer Science and Engineering graduate who enjoys turning ideas into reliable, easy-to-use web applications. I work across the whole stack, from responsive interfaces to secure APIs and databases.",
+      "I care about clean code, thoughtful user experience and continuous learning, and I'm open to junior full-stack and frontend opportunities where I can contribute to real products."
     ],
     photo: "assets/musfiqur.jpg",   // e.g. "assets/me.jpg" (square image works best). "" = no photo.
     facts: [
@@ -36,10 +36,10 @@ window.PORTFOLIO = {
 
   about: {
     paragraphs: [
-      "I studied Computer Science and Engineering at Varendra University, Rajshahi, and graduated in 2026 with a CGPA of 3.86 out of 4.00. I started building real web projects with plain HTML, CSS and JavaScript, and my first public project was Hisabghor in 2025.",
-      "After that I moved to the MERN stack and Next.js and built IdeaVault and MediCare Connect in 2026. These projects include JWT authentication, Google OAuth, role-based dashboards and Stripe payments.",
-      "For my BSc thesis I worked with a team of three on a Python machine learning pipeline for early detection of gestational diabetes, and I am the second author of a paper accepted at UCICS 2026.",
-      "My background is in Computer Science and Engineering, and I have always enjoyed building new things. Programming gave me a way to turn an idea into something real that people can actually use."
+      "My journey into software began with my Computer Science and Engineering studies, where I discovered how much I enjoy building things that actually work. I started with the core web technologies, HTML, CSS and JavaScript, and gradually moved on to full-stack development with React, Next.js, Node.js and MongoDB.",
+      "I like to take a product through its whole life cycle: designing the interface, building the API, connecting the database and deploying it so real people can use it. I'm especially drawn to problems around authentication, access control and online payments, and to simple tools that make everyday tasks easier for people.",
+      "Alongside web development, I have an interest in machine learning. My thesis and a co-authored research paper gave me experience working in a team and validating results carefully, which also shapes how I write software: with attention to detail.",
+      "I'm practical, curious and patient, and I like to finish what I start. Away from the screen, you'll find me travelling, playing football or watching a good movie."
     ],
     interests: [
       "Travelling & exploring",
